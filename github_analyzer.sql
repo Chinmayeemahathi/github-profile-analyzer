@@ -1,0 +1,22 @@
+CREATE TABLE `github_profiles` (
+  `id` int NOT NULL AUTO_INCREMENT,
+  `username` varchar(100) DEFAULT NULL,
+  `name` varchar(255) DEFAULT NULL,
+  `bio` text,
+  `public_repos` int DEFAULT NULL,
+  `followers` int DEFAULT NULL,
+  `following` int DEFAULT NULL,
+  `account_created` datetime DEFAULT NULL,
+  `profile_url` varchar(255) DEFAULT NULL,
+  `avatar_url` text,
+  `top_language` varchar(100) DEFAULT NULL,
+  `most_starred_repo` varchar(255) DEFAULT NULL,
+  `max_stars` int DEFAULT NULL,
+  `profile_score` int DEFAULT NULL,
+  `developer_level` varchar(50) DEFAULT NULL,
+  `analyzed_at` timestamp NULL DEFAULT CURRENT_TIMESTAMP,
+  `total_stars` int DEFAULT '0',
+  `language_breakdown` json DEFAULT NULL,
+  PRIMARY KEY (`id`),
+  UNIQUE KEY `username` (`username`)
+) ENGINE=InnoDB AUTO_INCREMENT=8 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci
